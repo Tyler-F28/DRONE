@@ -1,0 +1,15 @@
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.connect()
+drone.set_drone_LED(255, 127, 0, 9099)
+drone.drone_buzzer(3951, 800)
+drone.takeoff()
+drone.move_forward(1, "m", 1)
+drone.flip("back")
+drone.hover(2)
+drone.move_backward(1, "m", 1)
+drone.land()
+drone.drone_buzzer(3889, 908)
+drone.drone_LED_off()
+drone.disconnect()
